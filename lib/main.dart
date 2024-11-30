@@ -8,9 +8,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'My First Flutter App',
+      title: 'First Flutter App',
+      debugShowCheckedModeBanner: false, // Removes debug tag
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepPurple, // Custom color scheme
       ),
       home: MyHomePage(),
     );
@@ -23,11 +24,17 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String _displayText = 'Hello, Flutter!';
+  String _displayText = 'Welcome to Flutter!';
 
   void _changeText() {
     setState(() {
-      _displayText = 'Text changed!';
+      _displayText = 'Hello, Flutter!';
+    });
+  }
+
+  void _resetText() {
+    setState(() {
+      _displayText = 'Welcome to Flutter!';
     });
   }
 
@@ -35,20 +42,77 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My First Flutter App'),
+        title: const Text('First Flutter App'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              _displayText,
-              style: TextStyle(fontSize: 24),
+            // Profile Picture
+            CircleAvatar(
+              radius: 50,
+              backgroundImage: AssetImage('assets/profile.jpg'),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 15),
+            // Name
+            const Text(
+              'Guilaine Ndahiro',
+              style: TextStyle(
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+                color: Colors.deepPurple,
+              ),
+            ),
+            const SizedBox(height: 30),
+            // "Press Me" Button
             ElevatedButton(
               onPressed: _changeText,
-              child: Text('Change Text'),
+              child: const Text(
+                'Press Me',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.deepPurple.shade600,
+                foregroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 40,
+                  vertical: 15,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+            ),
+            const SizedBox(height: 15),
+            // Dynamic Text
+            Text(
+              _displayText,
+              style: const TextStyle(
+                fontSize: 22,
+                fontStyle: FontStyle.italic,
+                color: Colors.black87,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 15),
+            // Reset Button
+            ElevatedButton(
+              onPressed: _resetText,
+              child: const Text(
+                'Reset',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.pinkAccent.shade400,
+                foregroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 40,
+                  vertical: 15,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
             ),
           ],
         ),
