@@ -1,122 +1,56 @@
+// First let's set up the project structure
+// lib/main.dart
 import 'package:flutter/material.dart';
+import 'screens/login_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const TodoApp());
 }
 
-class MyApp extends StatelessWidget {
+class TodoApp extends StatelessWidget {
+  const TodoApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'First Flutter App',
-      debugShowCheckedModeBanner: false, // Removes debug tag
+      title: 'CheckMe - Todo App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple, // Custom color scheme
+        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        useMaterial3: true,
       ),
-      home: MyHomePage(),
+      home: const LoginScreen(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
+// lib/models/todo.dart
+class Todo {
+  final String id;
+  final String title;
+  String? description;
+  bool isCompleted;
+  final DateTime createdAt;
+
+  Todo({
+    required this.id,
+    required this.title,
+    this.description,
+    this.isCompleted = false,
+    required this.createdAt,
+  });
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  String _displayText = 'Welcome to Flutter!';
+// lib/models/user.dart
+class User {
+  final String name;
+  final String email;
+  final String avatar;
 
-  void _changeText() {
-    setState(() {
-      _displayText = 'Hello, Flutter!';
-    });
-  }
-
-  void _resetText() {
-    setState(() {
-      _displayText = 'Welcome to Flutter!';
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('First Flutter App'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            // Profile Picture
-            CircleAvatar(
-              radius: 50,
-              backgroundImage: AssetImage('assets/profile.jpg'),
-            ),
-            const SizedBox(height: 15),
-            // Name
-            const Text(
-              'Guilaine Ndahiro',
-              style: TextStyle(
-                fontSize: 26,
-                fontWeight: FontWeight.bold,
-                color: Colors.deepPurple,
-              ),
-            ),
-            const SizedBox(height: 30),
-            // "Press Me" Button
-            ElevatedButton(
-              onPressed: _changeText,
-              child: const Text(
-                'Press Me',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.deepPurple.shade600,
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 40,
-                  vertical: 15,
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
-            ),
-            const SizedBox(height: 15),
-            // Dynamic Text
-            Text(
-              _displayText,
-              style: const TextStyle(
-                fontSize: 22,
-                fontStyle: FontStyle.italic,
-                color: Colors.black87,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 15),
-            // Reset Button
-            ElevatedButton(
-              onPressed: _resetText,
-              child: const Text(
-                'Reset',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.pinkAccent.shade400,
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 40,
-                  vertical: 15,
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+  User({
+    required this.name,
+    required this.email,
+    this.avatar = 'https://ui-avatars.com/api/?name=User',
+  });
 }
