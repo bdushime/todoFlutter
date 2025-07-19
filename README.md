@@ -35,3 +35,5 @@ Want to try it out or contribute? Here’s how to get started:
 ### 2. Navigate into the project
 
 ### 3.  Install dependencies
+
+### 4. Run the app
