@@ -12,7 +12,8 @@ Whether you're tracking your mood, journaling your thoughts, chatting with fello
 
 Add Tasks – Easily add new tasks with a simple and intuitive interface.
 
-🗑️ Delete Tasks – Remove completed or unnecessary tasks with a single tap.
+ - **Delete Tasks **
+    Remove completed or unnecessary tasks with a single tap.
 
  **Track Task Status** 
     Mark tasks as completed or pending to stay on top of your progress.
