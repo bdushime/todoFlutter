@@ -9,6 +9,21 @@ Whether you're tracking your mood, journaling your thoughts, chatting with fello
 
 ##  Features
 
+
+Add Tasks – Easily add new tasks with a simple and intuitive interface.
+
+🗑️ Delete Tasks – Remove completed or unnecessary tasks with a single tap.
+
+ **Track Task Status** 
+    Mark tasks as completed or pending to stay on top of your progress.
+
+–  **Organise** 
+    See all your tasks in one place and plan your day effectively.
+
+- ****Clean UI**
+    Minimalist and user-friendly design for a smooth experience.
+
+
 -  **Mood Tracking & Journaling**  
   Reflect on how you feel and write down your thoughts in a safe, personal space.
 
