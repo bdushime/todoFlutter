@@ -31,16 +31,8 @@ Add Tasks – Easily add new tasks with a simple and intuitive interface.
 -  **Anonymous Peer Support Chat**  
   Talk to other students anonymously. Share your thoughts, listen, and be heard — no pressure, no names.
 
--  **Guided Meditations & Breathing Exercises**  
-  Calm your mind with easy-to-follow relaxation techniques to reduce stress and anxiety.
 
--  **Emergency Contact Integration**  
-  One tap gets you in touch with university counselors or emergency help when you need it most.
 
--  **Offline Storage**  
-  Even without the internet, your journal and mood logs stay safe on your device.
-
----
 
 ##  Getting Started
 
