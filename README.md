@@ -1,16 +1,36 @@
-# first_flutter_app
+# Student Wellness App
 
-A new Flutter project.
+Hey there! 
+Welcome to the **Student Wellness App** — a simple and supportive Flutter app made to help students check in with themselves, feel more grounded, and stay connected.
 
-## Getting Started
+Whether you're tracking your mood, journaling your thoughts, chatting with fellow students, or just taking a breather — this app is designed with your mental well-being in mind.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+##  Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- 📝 **Mood Tracking & Journaling**  
+  Reflect on how you feel and write down your thoughts in a safe, personal space.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- 💬 **Anonymous Peer Support Chat**  
+  Talk to other students anonymously. Share your thoughts, listen, and be heard — no pressure, no names.
+
+- 🧘 **Guided Meditations & Breathing Exercises**  
+  Calm your mind with easy-to-follow relaxation techniques to reduce stress and anxiety.
+
+- 🚨 **Emergency Contact Integration**  
+  One tap gets you in touch with university counselors or emergency help when you need it most.
+
+- 📂 **Offline Storage**  
+  Even without the internet, your journal and mood logs stay safe on your device.
+
+---
+
+## 🚀 Getting Started
+
+Want to try it out or contribute? Here’s how to get started:
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/student-wellness-app.git
